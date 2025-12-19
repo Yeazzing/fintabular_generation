@@ -23,6 +23,8 @@
   - SDV(Synthetic Data Vault) 프로젝트에서 제공하는 GAN/VAE 기반 테이블 데이터 생성 모델로,  
     본 프로젝트에서는 학습 및 추론 스크립트를 일부 수정하여 사용하였습니다.
 
+---
+
 ## 2. FinDiff 모델 실행 방법
 - `findiff/` 디렉토리 내의 `main.py`를 통해 실행합니다.
 - `--mode` 옵션으로 **학습(train)** 또는 **추론(infer)** 을 선택합니다.
@@ -55,7 +57,7 @@ python main_ctgan.py \
   --data_path /path/to/data.csv \
   --metadata /path/to/metadata.json
   ```
-  ### 추론 (Infer)
+### 추론 (Infer)
   ```bash
 python main_ctgan.py \
   --mode infer \
@@ -69,14 +71,14 @@ python main_ctgan.py \
 - `--mode` 옵션으로 **학습(train)** 또는 **추론(infer)** 을 선택합니다.
 - 학습에 사용하는 `metadata.json` 파일은 [모델 weight 링크](https://drive.google.com/drive/folders/1OPuGtA2fVh_eQlhx-maF3DthOiYfyaLq?usp=drive_link)에 함께 포함되어 있습니다.  
   - `metadata.json` : 컬럼 타입/범주형 or 연속형 컬럼 정보를 담은 메타데이터  
-  ### 학습 (Train)
+### 학습 (Train)
 ```bash
 python main_tvae.py \
   --mode train \
   --data_path /path/to/data.csv \
   --metadata /path/to/metadata.json
   ```
-  ### 추론 (Infer)
+### 추론 (Infer)
   ```bash
 python main_tvae.py \
   --mode infer \
